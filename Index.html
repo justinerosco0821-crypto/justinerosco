@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Chat</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <main class="chat">
+
+        <!-- Header: title + who is sending + clear button -->
+        <header class="chat-header">
+            <h1> Class Chat</h1>
+            <div class="controls">
+                <label for="user-select">Send as</label>
+                <select id="user-select">
+                    <option value="Ana">Ana</option>
+                    <option value="Ben">Ben</option>
+                </select>
+                <button id="clear-btn" type="button" class="ghost">Clear chat</button>
+            </div>
+        </header>
+
+        <!-- Messages are added here by script.js-->
+        <ul id="messages" class="messages" aria-live="polite"></ul>
+
+        <!-- Composer: text box + send button-->
+        <form id="message-form" class="composer" autocomplete="off">
+            <label for="message-input" class="visually-hidden">Message</label>
+            <input id="message-input" type="text" maxlength="500" required
+            placeholder="Type a message">
+            <button type="submit">Send</button>
+        </form>
+       
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
